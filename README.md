@@ -14,6 +14,7 @@
 [![Chat][chat-badge]][chat]
 [![Sponsored by Callstack][callstack-badge]][callstack]
 
+**NOTE:** This is a Metaphor maintained soft fork to attempt to make this library more compatible with React Native Web.
 > We renamed the `react-native-testing-library` npm package to `@testing-library/react-native`, officially joining the "Testing Library" family 🎉. Read the [migration guide](https://callstack.github.io/react-native-testing-library/docs/migration-v7).
 
 ## The problem
