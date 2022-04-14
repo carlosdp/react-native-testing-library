@@ -1,4 +1,5 @@
 import type { ReactTestInstance } from 'react-test-renderer';
+import { Platform } from 'react-native';
 import { matches, TextMatch } from '../matches';
 import { makeQueries } from './makeQueries';
 import type { Queries } from './makeQueries';
@@ -10,7 +11,12 @@ const getNodeByTestId = (
   options: TextMatchOptions = {}
 ) => {
   const { exact, normalizer } = options;
-  return matches(testID, node.props.testID, normalizer, exact);
+  return matches(
+    testID,
+    Platform.OS === 'web' ? node.props['data-testid'] : node.props.testID,
+    normalizer,
+    exact
+  );
 };
 
 const queryAllByTestId = (
